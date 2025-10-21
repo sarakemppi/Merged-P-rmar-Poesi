@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pärmar & Poesi</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+
+<link rel="stylesheet" href="main.css" />
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      .font-title {
+        font-family: "Gravitas One", system-ui, serif;
+      }
+    </style>
+  </head>
+
+  <body>
+<!-- SEBBES HEADER - med bakgrundsbild -->
+<header class="header">
+  <figure class="relative">
+    <a href="index.html">
+      <img src="images/header2.jpg" alt="Header-bild" class="header-img" />
+    </a>
+  </figure>
+</header>
+
+
+<!-- NAV -->
+<nav class="relative flex justify-center items-center mt-3 gap-4">
+  <!-- Checkbox för mobilmeny -->
+  <input id="menu-toggle" type="checkbox" class="peer hidden" />
+
+  <!-- Hamburgerikon (bara i mobilvy) -->
+  <label for="menu-toggle" class="block cursor-pointer text-3xl md:hidden absolute right-4 -top-[45px]" aria-label="Öppna meny">
+    ☰
+  </label>
+
+  <!-- Meny -->
+  <ul class="hidden peer-checked:flex flex-col absolute top-[60px] right-0 w-[180px] text-right
+  md:flex md:flex-row md:static md:w-auto md:bg-transparent md:shadow-none md:gap-8">
+    <li><a href="boknyheter.html" class="block px-4 py-2 hover:underline">Boknyheter</a></li>
+    <li><a href="evenemang.html" class="block px-4 py-2 hover:underline">Evenemang</a></li>
+    <li><a href="sortiment.html" class="block px-4 py-2 hover:underline">Sortiment</a></li>
+    <li><a href="om-oss.html" class="block px-4 py-2 hover:underline">Om oss</a></li>
+  </ul>
+
+
+</nav>

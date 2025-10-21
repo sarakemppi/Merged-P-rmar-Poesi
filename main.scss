@@ -1,0 +1,243 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { height: 100%; }
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding-top: 2rem;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+}
+
+/* Headerbilden */
+img.header-img,
+.header-content img {
+  width: 100%;
+  height: clamp(220px, 28vw, 320px);
+  object-fit: cover;
+  display: block;
+  margin-bottom: 2rem;
+  border-radius: 0;
+}
+
+/* SÖK */
+.search-wrapper {
+  position: relative;
+  margin-left: auto;
+  margin-right: 20px;
+  justify-content: flex-end;
+}
+
+.search {
+  --padding: 14px;
+  width: 300px;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: var(--padding);
+  border-radius: 20px;
+  background: #f6f6f6;
+  align-self: flex-end;
+  margin-top: 8px;
+  margin-left: 10px;
+  height: auto;
+  transition: box-shadow 0.25s;
+
+  &:focus-within { box-shadow: 0 0 2px rgba(0,0,0,0.75); }
+
+  .search-icon,
+  .search-input::placeholder { color: rgba(0,0,0,0.5); }
+}
+
+.search-input {
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #333;
+  margin-left: var(--padding);
+  outline: none;
+  border: none;
+  background: transparent;
+  flex: 1;
+  z-index: 1;
+}
+
+/* MENY */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  padding: 15px 0;
+
+  @media (max-width: 600px) { padding: 20px 0; }
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0 0 12px;
+  padding: 0;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  li a {
+    text-decoration: none;
+    color: burlywood;
+    font-size: 18px;
+    transition: color 0.3s ease;
+
+    &:hover { color: #ff8800; }
+  }
+}
+
+/* BOX - ska vi ha detta - vad är det ? */
+.box {
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  display: block;
+  height: auto;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.book-box {
+  width: 120px;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+
+  img { width: 100%; height: auto; display: block; }
+}
+
+/* FOOTER  */
+#footer {
+  display: flex;
+  flex-direction: row; /* eller column om du vill stapla */
+  justify-content: space-between; /* valfritt */
+  justify-self: flex-end;
+  align-items: center; /* centrerar innehållet vertikalt */
+  background-color: $page-bg;
+  color: rgb(2, 33, 23);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  // padding: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border: 5px dotted $golden;
+  border-radius: 70%;
+  background-color: hsla(340, 53%, 17%, 0.796);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+
+  img { width: 4rem; height: 4rem; }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 0rem;
+  border: 5px solid hotpink;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+
+  h3 { padding-right: 0.5rem; }
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 0.07rem;
+
+  i {
+    font-size: 25px;
+    color: #cdb8fd;
+    &:hover { color: aqua; }
+  }
+}
+
+.letter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+
+  p { font-size: 1rem; align-self: start; }
+}
+
+#Submit {
+  border: 3px solid $golden;
+  border-radius: 6px;
+  padding: 0.2rem;
+  margin-left: 5px;
+  font-size: 0.7rem;
+  height: 2.2rem;
+  text-align: center;
+}
+
+.Send { display: flex; align-items: center; }
+
+input[type="email"] {
+  width: 21rem; /* bredden på fältet */
+  height: 2.2rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.7rem;
+  border: 3px solid $golden;
+  border-radius: 6px;
+  background-color: rgba(255, 252, 252, 0.148);
+  color: black;
+  transition: all 0.25s ease;
+
+  &::placeholder { color: #cdb8fd; }
+
+  &:focus {
+    outline: none;
+    border-color: #6d5ca1;
+    box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
+    background-color: white;
+  }
+
+  &:hover { border-color: lighten(hotpink, 10%); }
+}
+
+
