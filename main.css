@@ -17,6 +17,27 @@ h6 {
   font-weight: 600;
 }
 
+/* Finjustering rubriker */
+h1 {
+  font-size: 1.9rem !important;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem !important;
+  margin-bottom: 0.4rem;
+}
+
+h3 {
+  font-size: 1.3rem !important;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1a1110;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -218,7 +239,12 @@ nav {
 }
 
 .highlights-title h2 {
-  font-size: 1.8rem;
+  font-family: "Gravitas One", serif;
+  color: #593936;
+  font-size: 1.35rem;
+  letter-spacing: 0.4px;
+  line-height: 1.25;
+  margin: 0.4rem 0 0.6rem;
   text-align: center;
 }
 
@@ -244,8 +270,13 @@ nav {
   text-align: center;
 }
 .card-header h2 {
+  font-family: "Gravitas One", serif;
+  color: #593936;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
 }
 
 .card-body {

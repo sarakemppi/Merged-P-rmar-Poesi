@@ -20,6 +20,27 @@ h6 {
   font-weight: 600;
 }
 
+/* Finjustering rubriker */
+h1 {
+  font-size: 1.9rem !important;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem !important;
+  margin-bottom: 0.4rem;
+}
+
+h3 {
+  font-size: 1.3rem !important;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $ink;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -229,7 +250,12 @@ nav {
 }
 
 .highlights-title h2 {
-  font-size: 1.8rem;
+  font-family: "Gravitas One", serif;
+  color: $roseebony;
+  font-size: 1.35rem;
+  letter-spacing: 0.4px;
+  line-height: 1.25;
+  margin: 0.4rem 0 0.6rem;
   text-align: center;
 }
 
@@ -257,8 +283,13 @@ nav {
   text-align: center;
 
   h2 {
+    font-family: "Gravitas One", serif;
+    color: $roseebony;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+    line-height: 1.25;
+    margin-bottom: 0.35rem;
   }
 }
 
@@ -488,3 +519,91 @@ input[type="email"] {
     border-color: lighten(hotpink, 10%);
   }
 }
+
+// /* --- RUBRIK-FINJUSTERING --- */
+// h1 {
+//   font-size: 1.6rem !important;
+//   font-weight: 400 !important;
+//   color: $roseebony !important;
+//   line-height: 1.2 !important;
+//   margin-bottom: 0.5rem !important;
+// }
+
+// h2 {
+//   font-size: 1.4rem !important;
+//   font-weight: 400 !important;
+//   color: $roseebony !important;
+//   line-height: 1.3 !important;
+//   margin-bottom: 0.4rem !important;
+// }
+
+// h3 {
+//   font-size: 1.2rem !important;
+//   font-weight: 500 !important;
+//   color: $roseebony !important;
+// }
+
+// /* Luft i rubrikerna */
+// h1,
+// h2 {
+//   letter-spacing: 0.5px !important;
+// }
+
+// /* Mindre rubriker inne i kort/boxar */
+// .content-card h2,
+// .book-box h2 {
+//   font-size: 1.2rem !important;
+//   line-height: 1.25 !important;
+//   margin-bottom: 0.4rem !important;
+// }
+
+// /* Lite toppmarginal på rubriker */
+// h1,
+// h2,
+// h3 {
+//   margin-top: 1rem !important;
+// }
+
+// /* --- RUBRIKER, FINJUST --- */
+
+// /* 1) Global bas – lite mindre */
+// h1 {
+//   font-size: 1.5rem !important;
+//   line-height: 1.2 !important;
+// }
+// h2 {
+//   font-size: 1.35rem !important;
+//   line-height: 1.25 !important;
+// }
+
+// /* 2) Sektionstitlar (t.ex. “Nästkommande evenemang”) */
+// .highlights-title h2 {
+//   font-size: 1.3rem !important;
+//   letter-spacing: 0.4px !important; /* lite luft mellan bokstäverna */
+//   margin: 0.4rem 0 0.6rem !important;
+// }
+
+// /* 3) Rubriker inne i kort/boxar */
+// .content-card .card-header h2,
+// .book-box .book-month h2 {
+//   font-size: 1.15rem !important;
+//   letter-spacing: 0.3px !important;
+//   margin-bottom: 0.35rem !important;
+// }
+
+// /* 4) Desktop – snäpp upp lite så det inte blir för litet på större skärmar */
+// @media (min-width: 1024px) {
+//   h1 {
+//     font-size: 1.6rem !important;
+//   }
+//   h2 {
+//     font-size: 1.4rem !important;
+//   }
+//   .highlights-title h2 {
+//     font-size: 1.35rem !important;
+//   }
+//   .content-card .card-header h2,
+//   .book-box .book-month h2 {
+//     font-size: 1.2rem !important;
+//   }
+// }
