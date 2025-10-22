@@ -223,14 +223,16 @@ nav {
 }
 
 .content-card {
-  display: flex;
-  align-items: center;
-  background-color: #bcaa99;
-  width: 100%;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
+  @include card-layout;
 }
+
+// display: flex;
+// align-items: center;
+// background-color: #bcaa99;
+// width: 100%;
+// flex-direction: column;
+// border-radius: 0.5rem;
+// margin-top: 1rem;
 
 .card-header {
   margin-top: 1rem;
@@ -272,14 +274,18 @@ nav {
 }
 
 .book-box {
-  display: flex;
-  align-items: center;
-  background-color: #bcaa99;
-  width: 100%;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
+  @include card-layout;
 }
+
+// .book-box {
+//   display: flex;
+//   align-items: center;
+//   background-color: #bcaa99;
+//   width: 100%;
+//   flex-direction: column;
+//   border-radius: 0.5rem;
+//   margin-top: 1rem;
+// }
 
 .book-month {
   margin-top: 1rem;

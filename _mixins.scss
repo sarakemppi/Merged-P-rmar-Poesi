@@ -1,8 +1,18 @@
-@mixin card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  background: white;
-  padding: 1rem;
-  // padding: 1.5rem;
-  // border-radius: $radius;
+@mixin card-layout {
+  display: flex;
+  align-items: center;
+  background-color: #bcaa99;
+  width: 100%;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
+
+// @mixin card {
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+//   border-radius: 8px;
+//   background: white;
+//   padding: 1rem;
+//   // padding: 1.5rem;
+//   // border-radius: $radius;
+// }
