@@ -370,6 +370,21 @@ nav {
 /* FOOTER  */
 #footer {
   display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #e8e3dc;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-top {
+  display: flex;
   flex-direction: row; /* eller column om du vill stapla */
   justify-content: space-between; /* valfritt */
   justify-self: flex-end;
@@ -382,7 +397,95 @@ nav {
   background-repeat: no-repeat;
   color: white;
 }
+.footer-top .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer-top .info .info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-right: 2rem;
+}
+.footer-top .info .info-row span {
+  flex: 1;
+}
+.footer-top .info .info-row i {
+  flex-shrink: 0;
+  color: #f6c57e;
+  border: 3px solid #f6c57e;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  transition: all 0.3s ease;
+}
+.footer-top .info .info-row i:hover {
+  background-color: #f6c57e;
+  color: black;
+}
 
+.footer-bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+  padding: 1rem 2rem;
+  border-top: 1px dotted #f6c57e;
+}
+.footer-bottom .right {
+  position: absolute;
+  margin-top: 1rem;
+  text-align: center;
+  color: #f6c57e;
+}
+.footer-bottom .social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.footer-bottom .icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  color: #f6c57e;
+}
+.footer-bottom .icons i {
+  color: #f6c57e;
+  border: 3px solid #f6c57e;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  transition: all 0.3s ease;
+}
+.footer-bottom .icons i:hover {
+  background-color: #f6c57e;
+  color: #111;
+}
+
+/* desktop-inställningarna måste ligga UTANFÖR .footer-bottom-blocket */
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    align-items: flex-end;
+    gap: 2rem;
+    padding-right: 6rem;
+  }
+  .footer-bottom .right {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1.5rem;
+    text-align: right;
+    margin-top: 0;
+  }
+  .footer-bottom .icons {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
 .logo-container {
   display: flex;
   justify-content: center;
@@ -408,27 +511,8 @@ nav {
   align-self: flex-end;
   justify-content: flex-end;
   padding-bottom: 0rem;
-  border: 5px solid hotpink;
   margin-bottom: 2rem;
   margin-right: 2rem;
-}
-.footer-container h3 {
-  padding-right: 0.5rem;
-}
-
-.icons {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  justify-content: flex-end;
-  margin-top: 0.07rem;
-}
-.icons i {
-  font-size: 25px;
-  color: #cdb8fd;
-}
-.icons i:hover {
-  color: aqua;
 }
 
 .letter {
@@ -458,7 +542,7 @@ nav {
 }
 
 input[type=email] {
-  width: 21rem; /* bredden på fältet */
+  width: 21rem;
   height: 2.2rem;
   padding: 0.7rem 1rem;
   font-size: 0.7rem;
@@ -478,7 +562,61 @@ input[type=email]:focus {
   background-color: white;
 }
 input[type=email]:hover {
-  border-color: rgb(255, 156, 205.5);
+  border-color: rgb(249.3260869565, 218.4347826087, 173.6739130435);
+}
+
+.fa-map-marker-alt {
+  transform: scale(1.15) translateY(1px);
+  margin-right: 0.2rem;
+}
+
+.fas-fa-envelope {
+  transform: scale(1.2) translateY(1px);
+}
+
+.footer-bottom {
+  position: relative;
+  min-height: 5rem;
+}
+
+.footer-bottom .icons {
+  position: absolute;
+  bottom: 0.2rem;
+  left: 1.5rem;
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column; /* stapla rubrik över ikoner */
+  align-items: center; /* centrera rubrik + ikoner horisontellt */
+  gap: 0.8rem; /* lite mellanrum mellan text och ikoner */
+}
+.footer-bottom .icons .h3 {
+  margin-top: 1rem;
+}
+
+.footer-bottom .social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  justify-content: center; /* centrera ikonerna under rubriken */
+}
+
+.footer-bottom .icons h3 {
+  margin: 0;
+  color: #f6c57e;
+  text-align: center;
+}
+.footer-bottom .icons h3:hover {
+  background-color: #f6c57e;
+  color: #111;
+}
+
+.footer-bottom .right {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 0.5rem;
+  color: #f6c57e;
+  text-align: right;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
