@@ -48,7 +48,7 @@ type();
 searchInput.addEventListener("input", function () {
   if (!typingPaused) {
     clearTimeout(typingInterval);
-    typingPaused = true;
+    typingPaused = false;
     element.textContent = "";
   }
 });

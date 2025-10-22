@@ -126,7 +126,7 @@ nav {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/hero-image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/hero-image.jpg");
   height: 40rem;
   background-position: 50% 20%;
   background-repeat: no-repeat;
@@ -180,6 +180,20 @@ nav {
   margin: 1rem;
   width: 70%;
   border: 5px solid rgb(106, 66, 17);
+}
+
+.highlight {
+  position: absolute;
+  left: 170px;
+  top: 55%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+  color: #b34700;
+  border-right: 2px solid #b34700;
+  animation: blink 0.8s infinite;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .highlights-container {

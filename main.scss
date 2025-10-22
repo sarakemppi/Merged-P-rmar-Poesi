@@ -80,7 +80,7 @@ img.header-img,
 .search-input {
   font-size: 14px;
   font-family: sans-serif;
-  color: #333;
+  color: $text-color;
   margin-left: var(--padding);
   outline: none;
   border: none;
@@ -126,32 +126,11 @@ nav {
   }
 }
 
-// /* BOX - ska vi ha detta - vad är det ? */
-// .box {
-//   background-color: white;
-//   box-shadow: 0 0 5px rgba(0,0,0,0.1);
-//   display: block;
-//   height: auto;
-//   border: 1px solid black;
-//   padding: 10px;
-//   margin-bottom: 10px;
-// }
-
-// .book-box {
-//   width: 120px;
-//   border: 1px solid black;
-//   padding: 10px;
-//   text-align: center;
-//   background-color: white;
-
-//   img { width: 100%; height: auto; display: block; }
-// }
-
 // PONTUS MAIN TEST//
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("assets/hero-image.jpg");
+    url("images/hero-image.jpg");
   height: 40rem;
   background-position: 50% 20%;
   background-repeat: no-repeat;
@@ -208,6 +187,20 @@ nav {
   margin: 1rem;
   width: 70%;
   border: 5px solid rgb(106, 66, 17);
+}
+
+.highlight {
+  position: absolute;
+  left: 170px;
+  top: 55%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+  color: #b34700;
+  border-right: 2px solid #b34700;
+  animation: blink 0.8s infinite;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .highlights-container {
