@@ -367,53 +367,114 @@ nav {
     width: 50%;
   }
 }
-/* FOOTER  */
+/* === FOOTER === */
 #footer {
   display: flex;
   flex-direction: column;
-  position: relative;
-  bottom: 0;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   background-color: #e8e3dc;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../images/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../images/bg.jpg") center/cover no-repeat;
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
+/* --- ÖVRE DELEN --- */
 .footer-top {
   display: flex;
-  flex-direction: row; /* eller column om du vill stapla */
-  justify-content: space-between; /* valfritt */
-  justify-self: flex-end;
-  align-items: center; /* centrerar innehållet vertikalt */
-  background-color: #e8e3dc;
-  color: rgb(2, 33, 23);
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../images/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0;
+    padding: 0 2rem;
+  }
+}
+.footer-top .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border: 5px dotted #f6c57e;
+  border-radius: 70%;
+  background-color: hsla(340, 53%, 17%, 0.8);
+}
+.footer-top .logo-container img {
+  width: 4rem;
+  height: 4rem;
+}
+.footer-top .letter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-top .letter p {
+  font-size: 1rem;
+}
+.footer-top .letter input[type=email] {
+  width: 16rem;
+  max-width: 80vw;
+  height: 2.2rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  border: 3px solid #f6c57e;
+  border-radius: 6px;
+  background-color: rgba(255, 252, 252, 0.15);
   color: white;
+  transition: all 0.25s ease;
+}
+.footer-top .letter input[type=email]::placeholder {
+  color: rgb(191.2565217391, 118.6086956522, 13.3434782609);
+}
+.footer-top .letter input[type=email]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
+  background-color: white;
+  color: black;
+}
+.footer-top .letter input[type=email]:hover {
+  border-color: #f6c57e;
+}
+.footer-top .letter #Submit {
+  border: 3px solid #f6c57e;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  color: #f6c57e;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+.footer-top .letter #Submit:hover {
+  background: #f6c57e;
+  color: #111;
 }
 .footer-top .info {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-top .info {
+    align-items: flex-end;
+    text-align: right;
+  }
 }
 .footer-top .info .info-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 0.5rem;
-  margin-right: 2rem;
-}
-.footer-top .info .info-row span {
-  flex: 1;
 }
 .footer-top .info .info-row i {
-  flex-shrink: 0;
   color: #f6c57e;
   border: 3px solid #f6c57e;
   border-radius: 4px;
@@ -422,225 +483,71 @@ nav {
 }
 .footer-top .info .info-row i:hover {
   background-color: #f6c57e;
-  color: black;
+  color: #111;
 }
 
+/* --- NEDRE DELEN --- */
 .footer-bottom {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end !important;
-  align-items: flex-start !important;
-  padding: 1rem 2rem;
-  border-top: 1px dotted #f6c57e;
-}
-.footer-bottom .right {
-  position: absolute;
-  margin-top: 1rem;
+  align-items: center;
   text-align: center;
-  color: #f6c57e;
-}
-.footer-bottom .social-media {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  border-top: 1px dotted #f6c57e;
+  margin-top: 2rem;
+  padding: 1rem;
 }
 .footer-bottom .icons {
   display: flex;
   flex-direction: column;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
+  align-items: center;
+  gap: 0.6rem;
+}
+.footer-bottom .icons h3 {
+  margin: 0;
   color: #f6c57e;
 }
-.footer-bottom .icons i {
+.footer-bottom .icons .social-media {
+  display: flex;
+  gap: 0.8rem;
+}
+.footer-bottom .icons .social-media i {
   color: #f6c57e;
   border: 3px solid #f6c57e;
   border-radius: 4px;
   padding: 0.4rem 0.6rem;
   transition: all 0.3s ease;
 }
-.footer-bottom .icons i:hover {
+.footer-bottom .icons .social-media i:hover {
   background-color: #f6c57e;
   color: #111;
 }
-
-/* desktop-inställningarna måste ligga UTANFÖR .footer-bottom-blocket */
-@media (min-width: 768px) {
-  .footer-bottom {
-    flex-direction: row !important;
-    justify-content: flex-end !important;
-    align-items: flex-end;
-    gap: 2rem;
-    padding-right: 6rem;
-  }
-  .footer-bottom .right {
-    position: absolute;
-    bottom: 0.5rem;
-    right: 1.5rem;
-    text-align: right;
-    margin-top: 0;
-  }
-  .footer-bottom .icons {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-}
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 6rem;
-  height: 6rem;
-  border: 5px dotted #f6c57e;
-  border-radius: 70%;
-  background-color: hsla(340, 53%, 17%, 0.796);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-}
-.logo-container img {
-  width: 4rem;
-  height: 4rem;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: flex-end;
-  justify-content: flex-end;
-  padding-bottom: 0rem;
-  margin-bottom: 2rem;
-  margin-right: 2rem;
-}
-
-.letter {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 2rem;
-}
-.letter p {
-  font-size: 1rem;
-  align-self: start;
-}
-
-#Submit {
-  border: 3px solid #f6c57e;
-  border-radius: 6px;
-  padding: 0.2rem;
-  margin-left: 5px;
-  font-size: 0.7rem;
-  height: 2.2rem;
-  text-align: center;
-}
-
-.Send {
-  display: flex;
-  align-items: center;
-}
-
-input[type=email] {
-  width: 21rem;
-  height: 2.2rem;
-  padding: 0.7rem 1rem;
-  font-size: 0.7rem;
-  border: 3px solid #f6c57e;
-  border-radius: 6px;
-  background-color: rgba(255, 252, 252, 0.148);
-  color: black;
-  transition: all 0.25s ease;
-}
-input[type=email]::placeholder {
-  color: #42c719;
-}
-input[type=email]:focus {
-  outline: none;
-  border-color: #39a72f;
-  box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
-  background-color: white;
-}
-input[type=email]:hover {
-  border-color: #f6c57e;
-}
-
-.fa-map-marker-alt {
-  transform: scale(1.15) translateY(1px);
-  margin-right: 0.2rem;
-}
-
-.fas-fa-envelope {
-  transform: scale(1.2) translateY(1px);
-}
-
-.footer-bottom {
-  position: relative;
-  min-height: 5rem;
-}
-
-.footer-bottom .icons {
-  position: absolute;
-  bottom: 0.2rem;
-  left: 1.5rem;
-  margin-top: 0.8rem;
-  display: flex;
-  flex-direction: column; /* stapla rubrik över ikoner */
-  align-items: center; /* centrera rubrik + ikoner horisontellt */
-  gap: 0.8rem; /* lite mellanrum mellan text och ikoner */
-}
-.footer-bottom .icons .h3 {
-  margin-top: 1rem;
-}
-
-.footer-bottom .social-media {
-  display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
-  justify-content: center; /* centrera ikonerna under rubriken */
-}
-
-.footer-bottom .icons h3 {
-  margin: 0;
-  color: #f6c57e;
-  text-align: center;
-}
-.footer-bottom .icons h3:hover {
-  background-color: #f6c57e;
-  color: #111;
-}
-
 .footer-bottom .right {
-  position: absolute;
-  right: 1.5rem;
-  bottom: 0.5rem;
   color: #f6c57e;
-  text-align: right;
-  margin: 0;
+  margin-top: 1rem;
+  font-size: 0.85rem;
 }
-
-.footer-bottom {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.footer-bottom .right,
-.footer-bottom .icons {
-  position: static;
-}
-
 @media (min-width: 768px) {
   .footer-bottom {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 1rem 3rem;
+    text-align: left;
   }
-  .footer-bottom .right,
   .footer-bottom .icons {
-    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .footer-bottom .icons h3 {
+    margin-right: 0.5rem;
+  }
+  .footer-bottom .right {
+    margin-top: 0;
+    text-align: right;
   }
 }
+
+/* FOOTER  */
 
 /*# sourceMappingURL=main.css.map */
