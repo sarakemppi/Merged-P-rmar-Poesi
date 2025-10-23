@@ -894,3 +894,26 @@ nav {
 //     }
 //   }
 // }
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .footer-bottom .icons {
+    position: static !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-bottom .social-media {
+    justify-content: center !important;
+  }
+
+  .footer-bottom .right {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

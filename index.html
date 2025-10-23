@@ -58,18 +58,57 @@
   <input id="menu-toggle" type="checkbox" class="peer hidden" />
 
   <!-- Hamburgerikon (bara i mobilvy) -->
-  <label for="menu-toggle" class="block cursor-pointer text-3xl md:hidden absolute right-4 -top-[45px]" aria-label="Öppna meny">
+<section class="flex items-center justify-between px-4 mt-2 relative">
+  <!-- SÖKRUTA -->
+  <!-- <form class="search flex-grow max-w-[80%]">
+    <span class="material-symbols-outlined search-icon">search</span>
+    <input class="search-input" type="search" placeholder="Sök efter..." />
+    <span id="changing-word" class="highlight"></span>
+  </form> -->
+
+  <!-- HAMBURGARE -->
+  <label
+    for="menu-toggle"
+    class="cursor-pointer text-3xl md:hidden ml-3 bg-[#2a1f1a]/80 text-[#f6c57e] rounded-md px-2 py-[1px] z-50"
+    aria-label="Öppna meny"
+  >
     ☰
   </label>
+</section>
 
   <!-- Meny -->
-  <ul class="hidden peer-checked:flex flex-col absolute top-[60px] right-0 w-[180px] text-right
-  md:flex md:flex-row md:static md:w-auto md:bg-transparent md:shadow-none md:gap-8">
-    <li><a href="boknyheter.html" class="block px-4 py-2 hover:underline">Boknyheter</a></li>
-    <li><a href="evenemang.html" class="block px-4 py-2 hover:underline">Evenemang</a></li>
-    <li><a href="sortiment.html" class="block px-4 py-2 hover:underline">Sortiment</a></li>
-    <li><a href="om-oss.html" class="block px-4 py-2 hover:underline">Om oss</a></li>
-  </ul>
+ 
+<ul
+  class="hidden peer-checked:flex flex-col absolute top-[48px] right-1 w-[160px] 
+  text-right bg-[#2a1f1a] text-[#f6c57e] shadow-[0_4px_12px_rgba(0,0,0,0.6)]
+  border border-[#f6c57e]/40 rounded-md z-50 overflow-hidden
+  md:flex md:flex-row md:static md:w-auto md:bg-transparent md:text-inherit md:shadow-none md:gap-8 transition-all duration-200"
+>
+  <li>
+    <a href="boknyheter.html"
+      class="block px-3 py-2 text-sm hover:bg-[#f6c57e] hover:text-[#2a1f1a] transition-colors duration-200">
+      Boknyheter
+    </a>
+  </li>
+  <li>
+    <a href="evenemang.html"
+      class="block px-3 py-2 text-sm hover:bg-[#f6c57e] hover:text-[#2a1f1a] transition-colors duration-200">
+      Evenemang
+    </a>
+  </li>
+  <li>
+    <a href="sortiment.html"
+      class="block px-3 py-2 text-sm hover:bg-[#f6c57e] hover:text-[#2a1f1a] transition-colors duration-200">
+      Sortiment
+    </a>
+  </li>
+  <li>
+    <a href="om-oss.html"
+      class="block px-3 py-2 text-sm hover:bg-[#f6c57e] hover:text-[#2a1f1a] transition-colors duration-200">
+      Om oss
+    </a>
+  </li>
+</ul>
 
 
 </nav>
