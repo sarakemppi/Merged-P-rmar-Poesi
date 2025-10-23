@@ -82,51 +82,51 @@ img.header-img,
 }
 
 /* SÖK */
-.search-wrapper {
-  position: relative;
-  margin-left: auto;
-  margin-right: 20px;
-  justify-content: flex-end;
-}
+// .search-wrapper {
+//   position: relative;
+//   margin-left: auto;
+//   margin-right: 20px;
+//   justify-content: flex-end;
+// }
 
-.search {
-  --padding: 14px;
-  width: 300px;
-  min-width: 300px;
-  max-width: 500px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: var(--padding);
-  border-radius: 20px;
-  background: #f6f6f6;
-  align-self: flex-end;
-  margin-top: 8px;
-  margin-left: 10px;
-  height: auto;
-  transition: box-shadow 0.25s;
+// .search {
+//   --padding: 14px;
+//   width: 300px;
+//   min-width: 300px;
+//   max-width: 500px;
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+//   padding: var(--padding);
+//   border-radius: 20px;
+//   background: #f6f6f6;
+//   align-self: flex-end;
+//   margin-top: 8px;
+//   margin-left: 10px;
+//   height: auto;
+//   transition: box-shadow 0.25s;
 
-  &:focus-within {
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
-  }
+//   &:focus-within {
+//     box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+//   }
 
-  .search-icon,
-  .search-input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
-  }
-}
+//   .search-icon,
+//   .search-input::placeholder {
+//     color: rgba(0, 0, 0, 0.5);
+//   }
+// }
 
-.search-input {
-  font-size: 14px;
-  font-family: sans-serif;
-  color: $text-color;
-  margin-left: var(--padding);
-  outline: none;
-  border: none;
-  background: transparent;
-  flex: 1;
-  z-index: 1;
-}
+// .search-input {
+//   font-size: 14px;
+//   font-family: sans-serif;
+//   color: $text-color;
+//   margin-left: var(--padding);
+//   outline: none;
+//   border: none;
+//   background: transparent;
+//   flex: 1;
+//   z-index: 1;
+// }
 
 /* MENY */
 nav {
