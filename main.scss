@@ -602,18 +602,18 @@ input[type="email"] {
   transition: all 0.25s ease;
 
   &::placeholder {
-    color: #cdb8fd;
+    color: #42c719;
   }
 
   &:focus {
     outline: none;
-    border-color: #6d5ca1;
+    border-color: #39a72f;
     box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
     background-color: white;
   }
 
   &:hover {
-    border-color: lighten($golden, 10%);
+    border-color: $golden;
   }
 }
 .fa-map-marker-alt {
@@ -669,4 +669,30 @@ input[type="email"] {
   color: $golden;
   text-align: right;
   margin: 0;
+}
+
+.footer-bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .right,
+  .icons {
+    position: static;
+  } // mobil
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .right,
+    .icons {
+      position: absolute;
+    }
+  }
 }

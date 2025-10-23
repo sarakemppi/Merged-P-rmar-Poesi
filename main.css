@@ -553,16 +553,16 @@ input[type=email] {
   transition: all 0.25s ease;
 }
 input[type=email]::placeholder {
-  color: #cdb8fd;
+  color: #42c719;
 }
 input[type=email]:focus {
   outline: none;
-  border-color: #6d5ca1;
+  border-color: #39a72f;
   box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
   background-color: white;
 }
 input[type=email]:hover {
-  border-color: rgb(249.3260869565, 218.4347826087, 173.6739130435);
+  border-color: #f6c57e;
 }
 
 .fa-map-marker-alt {
@@ -617,6 +617,30 @@ input[type=email]:hover {
   color: #f6c57e;
   text-align: right;
   margin: 0;
+}
+
+.footer-bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.footer-bottom .right,
+.footer-bottom .icons {
+  position: static;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .footer-bottom .right,
+  .footer-bottom .icons {
+    position: absolute;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
