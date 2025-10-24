@@ -129,6 +129,71 @@ img.header-img,
 // }
 
 /* MENY */
+// test
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Tailwind styr layout på olika skärmar, så vi fokuserar på stil
+  .search {
+    --padding: 14px;
+    background: #f6f6f6;
+    border-radius: 9999px; // full rundning
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.25s, background 0.25s;
+    padding: var(--padding);
+    gap: 0.5rem;
+
+    &:focus-within {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+      background: #ffffff;
+    }
+
+    .search-icon {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .nav-search-input {
+      font-size: 0.875rem;
+      color: #333;
+      border: none;
+      outline: none;
+      background: transparent;
+      width: 100%;
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .changing-word {
+      font-size: 0.875rem;
+      color: rgba(0, 0, 0, 0.5);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// --- Mobilanpassning ---
+@media (max-width: 768px) {
+  .search-wrapper {
+    width: 100%;
+    justify-content: center;
+
+    .search {
+      width: 90%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+  }
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -140,6 +205,56 @@ nav {
   }
 }
 
+nav ul {
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    line-height: 1.1;
+    top: 8rem !important;
+    padding: 0.4rem 0.6rem;
+    background-color: rgba(255, 255, 255, 0.97);
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  li a {
+    font-size: 0.95rem;
+    color: $roseebony;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $orange;
+      outline: none;
+    }
+  }
+}
+
+/* Flytta upp hamburgermenyn (ikon + dropdown följer med) */
+@media (max-width: 768px) {
+  /* lite luft mellan headerbild och hamburgarikonen */
+  label[for="menu-toggle"] {
+    position: relative;
+    margin-top: 0.6rem; // luft ner från headern
+    top: -0.4rem; // finjustering uppåt (testa -0.3 till -0.6)
+    z-index: 40;
+  }
+
+  /* centrera och flytta upp dropdownen */
+  nav ul {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: calc(100% + 0.3rem) !important;
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-family: $title-font;
+  }
+}
+
+//
 .menu {
   list-style: none;
   display: flex;
