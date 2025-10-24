@@ -79,50 +79,6 @@ img.header-img,
 }
 
 /* SÖK */
-.search-wrapper {
-  position: relative;
-  margin-left: auto;
-  margin-right: 20px;
-  justify-content: flex-end;
-}
-
-.search {
-  --padding: 14px;
-  width: 300px;
-  min-width: 300px;
-  max-width: 500px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: var(--padding);
-  border-radius: 20px;
-  background: #f6f6f6;
-  align-self: flex-end;
-  margin-top: 8px;
-  margin-left: 10px;
-  height: auto;
-  transition: box-shadow 0.25s;
-}
-.search:focus-within {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
-}
-.search .search-icon,
-.search .search-input::placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.search-input {
-  font-size: 14px;
-  font-family: sans-serif;
-  color: #333;
-  margin-left: var(--padding);
-  outline: none;
-  border: none;
-  background: transparent;
-  flex: 1;
-  z-index: 1;
-}
-
 /* MENY */
 nav {
   display: flex;
@@ -152,7 +108,7 @@ nav {
 }
 .menu li a {
   text-decoration: none;
-  color: burlywood;
+  color: #deb887;
   font-size: 18px;
   transition: color 0.3s ease;
 }
@@ -176,7 +132,7 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #ffffff;
   width: 100%;
 }
 .hero-text h1 {
@@ -191,7 +147,7 @@ nav {
   outline: 0;
   display: inline-block;
   padding: 0.6rem 1.4rem;
-  color: black;
+  color: #000000;
   background-color: #e8e3dc;
   border-radius: 5px;
   text-align: center;
@@ -203,7 +159,7 @@ nav {
 }
 .hero-link a:hover {
   background-color: #2a3439;
-  color: white;
+  color: #ffffff;
 }
 
 .event-img {
@@ -292,7 +248,7 @@ nav {
   margin: 1rem;
   width: 70%;
   border-radius: 50%;
-  border: 5px solid rgb(106, 66, 17);
+  border: 5px solid #6a4211;
 }
 
 .card-text {
@@ -405,7 +361,7 @@ nav {
   height: 6rem;
   border: 5px dotted #f6c57e;
   border-radius: 70%;
-  background-color: hsla(340, 53%, 17%, 0.8);
+  background-color: rgba(66, 20, 36, 0.8);
 }
 .footer-top .logo-container img {
   width: 4rem;
@@ -428,8 +384,8 @@ nav {
   font-size: 0.8rem;
   border: 3px solid #f6c57e;
   border-radius: 6px;
-  background-color: rgba(255, 252, 252, 0.15);
-  color: white;
+  background-color: rgba(255, 252, 252, 0.1490196078);
+  color: #ffffff;
   transition: all 0.25s ease;
 }
 .footer-top .letter input[type=email]::placeholder {
@@ -438,8 +394,8 @@ nav {
 .footer-top .letter input[type=email]:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+  color: #000000;
 }
 .footer-top .letter input[type=email]:hover {
   border-color: #f6c57e;
@@ -455,7 +411,7 @@ nav {
 }
 .footer-top .letter #Submit:hover {
   background: #f6c57e;
-  color: #111;
+  color: #000000;
 }
 .footer-top .info {
   display: flex;
@@ -483,7 +439,7 @@ nav {
 }
 .footer-top .info .info-row i:hover {
   background-color: #f6c57e;
-  color: #111;
+  color: #000000;
 }
 
 /* --- NEDRE DELEN --- */
@@ -519,7 +475,7 @@ nav {
 }
 .footer-bottom .icons .social-media i:hover {
   background-color: #f6c57e;
-  color: #111;
+  color: #000000;
 }
 .footer-bottom .right {
   color: #f6c57e;
