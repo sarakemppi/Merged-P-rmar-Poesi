@@ -12,6 +12,7 @@ Funktioner
 – Tailwind-konfiguration för återanvändbara komponenter
 – Git-arbetsflöde med branches per komponent
 – JavaScript för interaktiva element (t.ex. menyer, filtrering, modaler)
+- Globala färg- och typsnittsvariabler defineras i root för konsekvent styling
 
 Teknisk översikt
 
@@ -22,6 +23,7 @@ Byggt med:
 – JavaScript
 – CSS3
 – Git / GitHub
+
 
 Vi som jobbat på detta projekt
 
