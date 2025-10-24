@@ -49,20 +49,6 @@
     class="search-wrapper flex justify-center items-center mt-2 px-4"
     aria-label="Sök efter böcker med förslag"
   >
-    <!-- <form class="search flex items-center gap-2" role="search">
-      <label for="header-search" class="sr-only">Sök efter böcker</label>
-      <span class="material-symbols-outlined search-icon" aria-hidden="true">
-        search
-      </span>
-      <input
-        id="header-search"
-        class="search-input"
-        type="search"
-        placeholder="Sök efter..."
-        autocomplete="off"
-      />
-      <span id="changing-word" class="highlight" aria-live="polite"></span>
-    </form> -->
   </section>
 
   <!-- NAVIGATION (en sökruta, uppe till höger) -->
@@ -76,15 +62,17 @@
            aria-label="Öppna meny">☰</label>
 
     <!-- Länkar: centrerade på desktop, dropdown från vänster på mobil -->
-    <ul
-      class="hidden peer-checked:flex flex-col absolute top-full left-4 z-50
-             md:static md:flex md:flex-row md:gap-10 md:col-start-2 md:justify-self-center">
+    <ul class="hidden peer-checked:flex flex-col absolute z-50
+         md:static md:flex md:flex-row md:gap-10 md:col-start-2 md:justify-self-center">
       <li><a href="boknyheter.html">Boknyheter</a></li>
       <li><a href="evenemang.html">Evenemang</a></li>
       <li><a href="sortiment.html">Sortiment</a></li>
       <li><a href="om-oss.html">Om oss</a></li>
     </ul>
 
+
+
+    
     <!-- Sök: desktop (höger). Det är DENNA som JS ska styra -->
     <form
   class="search-wrapper hidden md:flex md:col-start-3 justify-self-end items-center gap-2 md:w-auto w-full md:justify-end justify-center px-4"
@@ -106,6 +94,7 @@
 </form>
 
   </div>
+
 </nav>
 
 
@@ -152,7 +141,7 @@ naturen.</p>
 
 <section class="event-img">
 <img src="images/female-author.jpg"
-alt="Person i beige och vit kostym sitter på en stol och ler mot kameran.">
+alt="Kvinna i beige och vit kostym sitter på en stol och ler mot kameran.">
 </section>
 <section class="card-text">
 <p> I en mysig hörna av bokhandeln samlas bokälskare för att träffa
