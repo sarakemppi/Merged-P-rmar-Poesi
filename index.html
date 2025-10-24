@@ -31,11 +31,15 @@
   </head>
 
   <body>
-<!-- SEBBES HEADER - med bakgrundsbild -->
-<header class="header">
+<!-- SEBBES HEADER - med bakgrundsbild SEO-anpassad/maria-->
+<header class="header" role="banner">
   <figure class="relative">
-    <a href="index.html">
-      <img src="images/header2.jpg" alt="Header-bild" class="header-img" />
+    <a href="index.html" aria-label="Till startsidan">
+      <img
+        src="images/header2.jpg"
+        alt="Bokhyllor med texten 'Pärmar & Poesi' överlagrad i guld"
+        class="header-img"
+      />
     </a>
   </figure>
 </header>
@@ -50,44 +54,37 @@
   </form>
 </section>
 
-<!-- NAV -->
-<nav class="relative mt-3 px-4">
-  <div class="flex items-center justify-center w-full">
-    <!-- SÖKRUTA -->
-    <!-- <form class="search flex items-center gap-2 flex-grow max-w-[75%]">
-      <span class="material-symbols-outlined text-gray-500">search</span>
-      <input
-        class="flex-grow bg-gray-100 rounded-full px-3 py-2 text-sm focus:outline-none"
-        type="search"
-        placeholder="Sök efter..."
-      />
-    </form> -->
-  </div>
 
-  <!-- HAMBURGARE + MENY -->
-  <div class="absolute top-[6px] right-4">
-    <input id="menu-toggle" type="checkbox" class="peer hidden" />
+<!-- NAVIGATION -->
+<nav class="w-full mt-3 px-4">
+  <div class="flex items-center justify-between max-w-6xl mx-auto">
+    <!-- Hamburger (visas bara i mobilvy) -->
+    <input type="checkbox" id="menu-toggle" class="peer hidden" />
 
     <label
       for="menu-toggle"
-      class="cursor-pointer text-3xl bg-[#2a1f1a]/90 text-[#f6c57e] rounded-md px-2 py-[1px]"
+      class="md:hidden text-3xl cursor-pointer px-2 py-[1px]"
       aria-label="Öppna meny"
     >
       ☰
     </label>
 
+    <!-- Navigationslänkar -->
     <ul
-      class="hidden peer-checked:flex flex-col absolute top-full right-0 mt-2
-             w-[150px] bg-[#2a1f1a]/95 text-[#f6c57e] text-center text-[0.9rem]
-             border border-[#f6c57e]/40 rounded-md shadow-[0_2px_8px_rgba(0,0,0,0.5)]
-             z-50 overflow-hidden
-             md:flex md:flex-row md:static md:w-auto md:bg-transparent md:text-inherit md:shadow-none md:border-0 md:gap-8 transition-all duration-200"
+      class="hidden peer-checked:flex flex-col absolute top-[60px] left-4
+             rounded-md border z-50
+             md:static md:flex md:flex-row md:gap-10 md:justify-center md:items-center
+             transition-all duration-200"
     >
-      <li><a href="boknyheter.html" class="block px-3 py-2 hover:bg-[#f6c57e] hover:text-[#2a1f1a]">Boknyheter</a></li>
-      <li><a href="evenemang.html" class="block px-3 py-2 hover:bg-[#f6c57e] hover:text-[#2a1f1a]">Evenemang</a></li>
-      <li><a href="sortiment.html" class="block px-3 py-2 hover:bg-[#f6c57e] hover:text-[#2a1f1a]">Sortiment</a></li>
-      <li><a href="om-oss.html" class="block px-3 py-2 hover:bg-[#f6c57e] hover:text-[#2a1f1a]">Om oss</a></li>
+      <li><a href="boknyheter.html" class="block px-4 py-2">Boknyheter</a></li>
+      <li><a href="evenemang.html" class="block px-4 py-2">Evenemang</a></li>
+      <li><a href="sortiment.html" class="block px-4 py-2">Sortiment</a></li>
+      <li><a href="om-oss.html" class="block px-4 py-2">Om oss</a></li>
     </ul>
+
+    <!-- Sökfält uppe till höger (desktop) -->
+    <form class="search hidden md:flex items-center gap-2">
+      <span class="material-symbols-outlined">search</span>
   </div>
 </nav>
 

@@ -82,51 +82,51 @@ img.header-img,
 }
 
 /* SÖK */
-.search-wrapper {
-  position: relative;
-  margin-left: auto;
-  margin-right: 20px;
-  justify-content: flex-end;
-}
+// .search-wrapper {
+//   position: relative;
+//   margin-left: auto;
+//   margin-right: 20px;
+//   justify-content: flex-end;
+// }
 
-.search {
-  --padding: 14px;
-  width: 300px;
-  min-width: 300px;
-  max-width: 500px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: var(--padding);
-  border-radius: 20px;
-  background: #f6f6f6;
-  align-self: flex-end;
-  margin-top: 8px;
-  margin-left: 10px;
-  height: auto;
-  transition: box-shadow 0.25s;
+// .search {
+//   --padding: 14px;
+//   width: 300px;
+//   min-width: 300px;
+//   max-width: 500px;
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+//   padding: var(--padding);
+//   border-radius: 20px;
+//   background: #f6f6f6;
+//   align-self: flex-end;
+//   margin-top: 8px;
+//   margin-left: 10px;
+//   height: auto;
+//   transition: box-shadow 0.25s;
 
-  &:focus-within {
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
-  }
+//   &:focus-within {
+//     box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+//   }
 
-  .search-icon,
-  .search-input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
-  }
-}
+//   .search-icon,
+//   .search-input::placeholder {
+//     color: rgba(0, 0, 0, 0.5);
+//   }
+// }
 
-.search-input {
-  font-size: 14px;
-  font-family: sans-serif;
-  color: $text-color;
-  margin-left: var(--padding);
-  outline: none;
-  border: none;
-  background: transparent;
-  flex: 1;
-  z-index: 1;
-}
+// .search-input {
+//   font-size: 14px;
+//   font-family: sans-serif;
+//   color: $text-color;
+//   margin-left: var(--padding);
+//   outline: none;
+//   border: none;
+//   background: transparent;
+//   flex: 1;
+//   z-index: 1;
+// }
 
 /* MENY */
 nav {
@@ -155,12 +155,12 @@ nav {
 
   li a {
     text-decoration: none;
-    color: burlywood;
+    color: $burly;
     font-size: 18px;
     transition: color 0.3s ease;
 
     &:hover {
-      color: #ff8800;
+      color: $orange;
     }
   }
 }
@@ -184,7 +184,7 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: $white;
   width: 100%;
 
   h1 {
@@ -201,8 +201,8 @@ nav {
   outline: 0;
   display: inline-block;
   padding: 0.6rem 1.4rem;
-  color: black;
-  background-color: #e8e3dc;
+  color: $black;
+  background-color: $egg-white;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
@@ -212,8 +212,8 @@ nav {
   transform: translate(-50%, -50%);
 
   &:hover {
-    background-color: #2a3439;
-    color: white;
+    background-color: $dark-ocean;
+    color: $white;
   }
 }
 
@@ -235,8 +235,8 @@ nav {
   transform: translateY(-50%);
   pointer-events: none;
   z-index: 2;
-  color: #b34700;
-  border-right: 2px solid #b34700;
+  color: $autumn;
+  border-right: 2px solid $autumn;
   animation: blink 0.8s infinite;
   font-size: 14px;
   white-space: nowrap;
@@ -306,7 +306,7 @@ nav {
     margin: 1rem;
     width: 70%;
     border-radius: 50%;
-    border: 5px solid rgb(106, 66, 17);
+    border: 5px solid $fall;
   }
 }
 
@@ -436,7 +436,7 @@ nav {
     height: 6rem;
     border: 5px dotted $golden;
     border-radius: 70%;
-    background-color: hsla(340, 53%, 17%, 0.8);
+    background-color: $pomegranate;
     img {
       width: 4rem;
       height: 4rem;
@@ -461,8 +461,8 @@ nav {
       font-size: 0.8rem;
       border: 3px solid $golden;
       border-radius: 6px;
-      background-color: rgba(255, 252, 252, 0.15);
-      color: white;
+      background-color: $greyworm;
+      color: $white;
       transition: all 0.25s ease;
 
       &::placeholder {
@@ -471,9 +471,9 @@ nav {
       &:focus {
         outline: none;
         // border-color: color.adjust($adjust-color);
-        box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
-        background-color: white;
-        color: black;
+        box-shadow: 0 0 5px $neon;
+        background-color: $white;
+        color: $black;
       }
       &:hover {
         border-color: $golden;
@@ -491,7 +491,7 @@ nav {
 
       &:hover {
         background: $golden;
-        color: #111;
+        color: $black;
       }
     }
   }
@@ -519,7 +519,7 @@ nav {
         transition: all 0.3s ease;
         &:hover {
           background-color: $golden;
-          color: #111;
+          color: $black;
         }
       }
     }
@@ -559,7 +559,7 @@ nav {
         transition: all 0.3s ease;
         &:hover {
           background-color: $golden;
-          color: #111;
+          color: $black;
         }
       }
     }
