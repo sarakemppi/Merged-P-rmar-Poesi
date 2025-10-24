@@ -23,11 +23,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <style>
-      .font-title {
-        font-family: "Gravitas One", system-ui, serif;
-      }
-    </style>
   </head>
 
   <body>
@@ -52,9 +47,7 @@
 
       <!-- NAVIGATION (en sökruta, uppe till höger) -->
       <nav class="w-full mt-3" aria-label="Huvudmeny">
-        <div
-          class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-3 items-center relative"
-        >
+        <div class="link-bar">
           <!-- Hamburger: bara mobil, vänster -->
           <input id="menu-toggle" type="checkbox" class="peer hidden" />
           <label
@@ -65,9 +58,7 @@
           >
 
           <!-- Länkar: centrerade på desktop, dropdown från vänster på mobil -->
-          <ul
-            class="hidden peer-checked:flex flex-col absolute z-50 md:static md:flex md:flex-row md:gap-10 md:col-start-2 md:justify-self-center"
-          >
+          <ul class="link-menu">
             <li><a href="boknyheter.html">Boknyheter</a></li>
             <li><a href="evenemang.html">Evenemang</a></li>
             <li><a href="sortiment.html">Sortiment</a></li>
@@ -75,7 +66,7 @@
           </ul>
           <!-- Sök: desktop (höger). Det är DENNA som JS ska styra -->
           <form
-            class="search-wrapper hidden md:flex md:col-start-3 justify-self-end items-center gap-2 md:w-auto w-full md:justify-end justify-center px-4"
+            class="search-wrapper md:flex md:col-start-3 justify-self-end items-center gap-2 md:w-auto w-full md:justify-end justify-center px-4"
             role="search"
             aria-label="Sök i sortiment"
           >
