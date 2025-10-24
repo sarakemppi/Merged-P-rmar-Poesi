@@ -156,13 +156,14 @@ nav ul li a {
   color: #593936;
   text-decoration: none;
 }
-nav ul li a:hover, nav ul li a:focus {
+nav ul li a:hover,
+nav ul li a:focus {
   color: #ff8800;
   outline: none;
 }
 
 @media (max-width: 768px) {
-  label[for=menu-toggle] {
+  label[for="menu-toggle"] {
     position: relative;
     margin-top: 0.6rem;
     top: -0.4rem;
@@ -204,7 +205,8 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/hero-image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/hero-image.jpg");
   height: 40rem;
   background-position: 50% 20%;
   background-repeat: no-repeat;
@@ -415,7 +417,8 @@ nav ul li a:hover, nav ul li a:focus {
   flex-direction: column;
   width: 100%;
   background-color: #e8e3dc;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../images/bg.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url("../images/bg.jpg") center/cover no-repeat;
   color: white;
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -455,13 +458,15 @@ nav ul li a:hover, nav ul li a:focus {
 .footer-top .letter {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
 .footer-top .letter p {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  padding-right: 2rem;
 }
-.footer-top .letter input[type=email] {
+.footer-top .letter input[type="email"] {
   width: 16rem;
   max-width: 80vw;
   height: 2.2rem;
@@ -473,16 +478,16 @@ nav ul li a:hover, nav ul li a:focus {
   color: #ffffff;
   transition: all 0.25s ease;
 }
-.footer-top .letter input[type=email]::placeholder {
+.footer-top .letter input[type="email"]::placeholder {
   color: rgb(191.2565217391, 118.6086956522, 13.3434782609);
 }
-.footer-top .letter input[type=email]:focus {
+.footer-top .letter input[type="email"]:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
   background-color: #ffffff;
   color: #000000;
 }
-.footer-top .letter input[type=email]:hover {
+.footer-top .letter input[type="email"]:hover {
   border-color: #f6c57e;
 }
 .footer-top .letter #Submit {
