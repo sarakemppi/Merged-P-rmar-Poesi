@@ -72,7 +72,7 @@ const words = [
 
 // Nya mål i NAV-sök
 const element = document.getElementById("nav-changing-word");
-const searchInput = document.querySelector(".nav-search-input");
+const searchInput = document.getElementById("nav-search-input");
 
 // Om sökfältet inte finns (t.ex. mobil), gör inget.
 if (element && searchInput) {
