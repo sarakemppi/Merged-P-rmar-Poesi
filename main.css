@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* --- FONTER --- */
+
 h1,
 h2 {
   font-family: "Gravitas One", system-ui, serif;
@@ -17,7 +17,7 @@ h6 {
   font-weight: 600;
 }
 
-/* Finjustering rubriker */
+
 h1 {
   font-size: 1.9rem !important;
   margin-bottom: 0.5rem;
@@ -59,7 +59,7 @@ main {
   padding-top: 2rem;
 }
 
-/* HEADER */
+
 .header {
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@ main {
   padding: 0;
 }
 
-/* Headerbilden */
+
 img.header-img,
 .header-content img {
   width: 100%;
@@ -78,8 +78,7 @@ img.header-img,
   border-radius: 0;
 }
 
-/* SÖK */
-/* MENY */
+
 .search-wrapper {
   position: relative;
   display: flex;
@@ -168,16 +167,16 @@ nav ul li a:hover, nav ul li a:focus {
   outline: none;
 }
 
-/* Flytta upp hamburgermenyn (ikon + dropdown följer med) */
+
 @media (max-width: 768px) {
-  /* lite luft mellan headerbild och hamburgarikonen */
+  
   label[for=menu-toggle] {
     position: relative;
     margin-top: 0.6rem;
     top: -0.4rem;
     z-index: 40;
   }
-  /* centrera och flytta upp dropdownen */
+  
   nav ul {
     position: absolute !important;
     left: 50% !important;
@@ -420,7 +419,7 @@ nav ul li a:hover, nav ul li a:focus {
     width: 50%;
   }
 }
-/* === FOOTER === */
+
 #footer {
   display: flex;
   flex-direction: column;
@@ -432,7 +431,7 @@ nav ul li a:hover, nav ul li a:focus {
   padding-bottom: 1rem;
 }
 
-/* --- ÖVRE DELEN --- */
+
 .footer-top {
   display: flex;
   flex-direction: column;
@@ -539,7 +538,7 @@ nav ul li a:hover, nav ul li a:focus {
   color: #000000;
 }
 
-/* --- NEDRE DELEN --- */
+
 .footer-bottom {
   display: flex;
   flex-direction: column;
@@ -601,7 +600,7 @@ nav ul li a:hover, nav ul li a:focus {
   }
 }
 
-/* FOOTER  */
+
 @media (max-width: 768px) {
   .footer-bottom {
     flex-direction: column !important;
@@ -623,4 +622,4 @@ nav ul li a:hover, nav ul li a:focus {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+
