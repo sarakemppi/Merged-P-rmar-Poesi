@@ -1,313 +1,261 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pärmar & Poesi</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Teamet på Pärmar & Poesi består av experter inom SEO, design, IT och bokhandel. Upptäck människorna bakom Sveriges kreativa bok- och poesiplats online." />
+  <title>Pärmar & Poesi</title>
 
-    <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <style>
-      .font-title {
-        font-family: "Gravitas One", system-ui, serif;
-      }
-    </style>
-  </head>
+  <link rel="stylesheet" href="main.css" />
 
-  <body>
-    <!-- SEBBES HEADER - med bakgrundsbild -->
-    <header class="header">
-      <figure class="relative">
-        <a href="index.html">
-          <img src="images/header2.jpg" alt="Header-bild" class="header-img" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    .font-title {
+      font-family: "Gravitas One", system-ui, serif;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- SEBBES HEADER - med bakgrundsbild -->
+  <header class="header">
+    <figure class="relative">
+      <a href="index.html">
+        <img src="images/header2.jpg" alt="Bokhyllor med texten 'Pärmar & Poesi' överlagrad i guld."
+          class="header-img" />
+      </a>
+    </figure>
+  </header>
+
+  <!-- NAV -->
+  <nav class="relative flex justify-center items-center mt-3 gap-4">
+    <!-- Checkbox för mobilmeny -->
+    <input id="menu-toggle" type="checkbox" class="peer hidden" />
+
+    <!-- Hamburgerikon (bara i mobilvy) -->
+    <label for="menu-toggle" class="block cursor-pointer text-3xl md:hidden absolute right-4 -top-[45px]"
+      aria-label="Öppna meny">
+      ☰
+    </label>
+
+    <!-- Meny -->
+    <ul
+      class="hidden peer-checked:flex flex-col absolute top-[60px] right-0 w-[180px] text-right md:flex md:flex-row md:static md:w-auto md:bg-transparent md:shadow-none md:gap-8 z-50">
+      <li>
+        <a href="boknyheter.html" class="block px-4 py-2 hover:underline">Boknyheter</a>
+      </li>
+      <li>
+        <a href="evenemang.html" class="block px-4 py-2 hover:underline">Evenemang</a>
+      </li>
+      <li>
+        <a href="sortiment.html" class="block px-4 py-2 hover:underline">Sortiment</a>
+      </li>
+      <li>
+        <a href="om-oss.html" class="block px-4 py-2 hover:underline">Om oss</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <!--PONTUS MAIN-->
+  <main>
+
+
+    <section class="event-container">
+
+      <section class="highlights-title">
+        <h2>Vår SEO-expert</h2>
+      </section>
+
+      <section class="highlights-box">
+        <section class="content-card">
+          <section class="card-header">
+            <h2>Maria</h2>
+          </section>
+
+          <section class="card-body">
+            <section class="event-img">
+              <img src="images/maria.jpg"
+                alt="Maria, vår SEO-expert sitter vid ett fönster och läser en bok i varmt solljus, med fokus och lugn stämning" />
+            </section>
+
+            <section class="card-text">
+              <p>
+                Maria är vår SEO-expert som ser till att Pärmar & Poesi alltid syns
+                där bokälskare letar efter nästa favorit. Med känsla för språk och
+                detaljer hjälper hon oss att nå ut med både passion och precision.
+              </p>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <section class="event-container">
+
+        <section class="highlights-title">
+          <h2>Vår manager</h2>
+        </section>
+
+        <section class="highlights-box">
+          <section class="content-card">
+            <section class="card-header">
+              <h2>Sara</h2>
+            </section>
+
+            <section class="card-body">
+              <section class="event-img">
+                <img src="images/sara.jpg"
+                  alt="Sara, manager på Pärmar & Poesi, sitter med blå tröja och glasögon som arbetar vid ett skrivbord med en MacBook, anteckningsbok, hörlurar och dekorationer i ett hemtrevligt kontor" />
+              </section>
+
+              <section class="card-text">
+                <p>
+                  Sara är butikschefen som håller ihop hela Pärmar & Poesi med värme och struktur.
+                  Hon har ett öga för detaljer och ser till att varje bokhylla, evenemang och kundupplevelse
+                  får den omtanke som gör vår bokhandel unik. Med passion för litteratur och ledarskap
+                  skapar hon en plats där både teamet och besökarna trivs.
+                </p>
+              </section>
+            </section>
+          </section>
+        </section>
+
+
+        <section class="highlights-container">
+          <section class="highlights-title">
+            <h2>Vår IT-ansvarige</h2>
+          </section>
+
+          <section class="highlights-box">
+            <section class="content-card">
+              <section class="card-header">
+                <h2>Sebastian</h2>
+              </section>
+
+              <section class="card-body">
+                <section class="event-img">
+                  <img src="images/sebastian.jpg"
+                    alt="Sebastian, IT-ansvarig på Pärmar & Poesi, sitter vid ett träbord med en laptop och en vit mugg i en varmt upplyst miljö med ljusslingor och festlig stämning, sedd genom ett fönster" />
+                </section>
+
+                <section class="card-text">
+                  <p>
+                    Sebastian är Pärmar & Poesis tekniska hjärta – den som ser till att allt från webbplats
+                    till kassa­system fungerar som det ska. Med lugn precision och kreativ problemlösning
+                    håller han vår digitala värld igång, så att vi andra kan fokusera på böckerna.
+                    Han brinner för att förena teknik och kultur på ett smart och användarvänligt sätt.
+                  </p>
+                </section>
+              </section>
+            </section>
+          </section>
+
+          <section class="highlights-title">
+            <h2>Vår designchef</h2>
+          </section>
+
+          <section class="highlights-box">
+            <section class="content-card">
+              <section class="card-header">
+                <h2>Pontus</h2>
+              </section>
+
+              <section class="card-body">
+                <section class="event-img">
+                  <img src="images/pontus.jpg"
+                    alt="Pontus, designchef på Pärmar & Poesi, sitter i en brun skjorta och skriver i en anteckningsbok vid ett skrivbord med dator, hörlurar och kontorsmaterial i ett modernt arbetsutrymme med grön vägg och gul skärm" />
+                </section>
+
+                <section class="card-text">
+                  <p>
+                    Pontus är den kreativa kraften bakom Pärmar & Poesis visuella uttryck.
+                    Han har en skarp blick för form, färg och balans, och ser till att varje detalj –
+                    från skyltning till webbdesign – speglar bokhandelns själ.
+                    Med ett konstnärligt öga och passion för estetik gör Pontus våra idéer till något som både syns och
+                    känns.
+                  </p>
+                </section>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+
+
+  </main>
+
+
+  <!--MARIAS FOOTER-->
+  <footer id="footer" class="flex flex-col w-full pt-8 pb-4 md:pt-12 md:pb-6">
+    <!-- ÖVRE DELEN -->
+    <section
+      class="footer-top flex flex-col items-center text-center gap-6 p-6 md:p-8 md:flex-row md:justify-between md:items-start md:text-left md:gap-0">
+      <!-- LOGGA -->
+      <section class="logo-container mx-auto my-6 md:my-4 md:ml-6">
+        <a href="#top">
+          <img src="images/log.png"
+            alt="Pärmar & Poesis logotyp i gyllene sammanflätade bokstäver P och P omgivna av en guldig krans" />
         </a>
-      </figure>
-    </header>
-
-    <!-- NAV -->
-    <nav class="relative flex justify-center items-center mt-3 gap-4">
-      <!-- Checkbox för mobilmeny -->
-      <input id="menu-toggle" type="checkbox" class="peer hidden" />
-
-      <!-- Hamburgerikon (bara i mobilvy) -->
-      <label
-        for="menu-toggle"
-        class="block cursor-pointer text-3xl md:hidden absolute right-4 -top-[45px]"
-        aria-label="Öppna meny"
-      >
-        ☰
-      </label>
-
-      <!-- Meny -->
-      <ul
-        class="hidden peer-checked:flex flex-col absolute top-[60px] right-0 w-[180px] text-right md:flex md:flex-row md:static md:w-auto md:bg-transparent md:shadow-none md:gap-8 z-50"
-      >
-        <li>
-          <a href="boknyheter.html" class="block px-4 py-2 hover:underline"
-            >Boknyheter</a
-          >
-        </li>
-        <li>
-          <a href="evenemang.html" class="block px-4 py-2 hover:underline"
-            >Evenemang</a
-          >
-        </li>
-        <li>
-          <a href="sortiment.html" class="block px-4 py-2 hover:underline"
-            >Sortiment</a
-          >
-        </li>
-        <li>
-          <a href="om-oss.html" class="block px-4 py-2 hover:underline"
-            >Om oss</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-
-    <!--PONTUS MAIN-->
-<main>
-
-
-<section class="event-container">
-
-<section class="highlights-title">
-  <h2>Vår SEO-expert</h2>
-</section>
-
-<section class="highlights-box">
-  <section class="content-card">
-    <section class="card-header">
-      <h2>Maria</h2>
-    </section>
-
-    <section class="card-body">
-      <section class="event-img">
-        <img
-          src="images/maria.jpg"
-          alt="Maria, vår SEO-expert sitter och läser en bok."
-        />
       </section>
 
-      <section class="card-text">
-        <p>
-          Maria är vår SEO-expert som ser till att Pärmar & Poesi alltid syns
-          där bokälskare letar efter nästa favorit. Med känsla för språk och
-          detaljer hjälper hon oss att nå ut med både passion och precision.
-        </p>
+      <!-- NYHETSBREV -->
+      <section class="letter mx-auto flex flex-col items-center gap-2 md:items-start md:gap-1">
+        <p class="text-sm md:text-base">Prenumerera på nyhetsbrev</p>
+        <article class="Send flex items-center">
+          <input type="email" placeholder="E-mail"
+            class="w-56 h-9 px-2 rounded-md transition focus:outline-none md:w-64" />
+          <button id="Submit" class="ml-2 px-3 py-1 text-xs rounded-md transition">
+            Skicka
+          </button>
+        </article>
+      </section>
+
+      <!-- KONTAKTINFORMATION -->
+      <section class="info flex flex-col items-center gap-3 text-center md:items-end md:text-right">
+        <nav class="info-row flex flex-col items-center gap-1 md:flex-row md:justify-between md:gap-2">
+          <span>Hitta till oss</span>
+          <i class="fas fa-map-marker-alt p-2 rounded hover:bg-yellow-400 hover:text-black transition"></i>
+        </nav>
+        <nav class="info-row flex flex-col items-center gap-1 md:flex-row md:justify-between md:gap-2">
+          <span>Kontakta oss</span>
+          <i class="fas fa-phone-alt p-2 rounded hover:bg-yellow-400 hover:text-black transition"></i>
+        </nav>
+        <nav class="info-row flex flex-col items-center gap-1 md:flex-row md:justify-between md:gap-2">
+          <span>E-post</span>
+          <i class="fas fa-envelope p-2 rounded hover:bg-yellow-400 hover:text-black transition"></i>
+        </nav>
       </section>
     </section>
-  </section>
-</section>
 
-<section class="event-container">
+    <section class="footer-container hidden"></section>
 
-<section class="highlights-title">
-  <h2>Vår manager</h2>
-</section>
+    <section
+      class="footer-bottom flex flex-col items-start justify-end gap-2 px-6 pb-4 md:flex-row md:justify-between md:items-end">
+      <section class="icons flex flex-col items-start gap-2 md:flex-row md:gap-4">
+        <h3 class="mb-2 md:mb-0">Följ oss</h3>
+        <nav class="social-media flex gap-3">
+          <i class="fab fa-facebook p-2 rounded hover:bg-yellow-400 hover:text-black transition"></i>
+          <i class="fab fa-instagram-square p-2 rounded hover:bg-yellow-400 hover:text-black transition"></i>
+          <i class="fab fa-twitter-square p-2 rounded hover:bg-yellow-400 hover:text-black transition"></i>
+          <i class="fab fa-pinterest-square p-2 rounded hover:bg-yellow-400 hover:text-black transition"></i>
+        </nav>
+      </section>
 
-<section class="highlights-box">
-  <section class="content-card">
-    <section class="card-header">
-      <h2>Sara</h2>
+      <p class="right text-xs md:text-sm mt-2 md:mr-6">
+        © <time datetime="2025">2025</time>
+        <a href="#">Pärmar &amp; Poesi</a>
+      </p>
     </section>
+  </footer>
+  <script src="script.js"></script>
+</body>
 
-    <section class="card-body">
-      <section class="event-img">
-        <img
-          src="images/sara.jpg"
-          alt="Sara, manager på Pärmar & Poesi, sitter vid datorn och arbetar."
-        />
-      </section>
-
-      <section class="card-text">
-        <p>
-          Sara är butikschefen som håller ihop hela Pärmar & Poesi med värme och struktur. 
-          Hon har ett öga för detaljer och ser till att varje bokhylla, evenemang och kundupplevelse 
-          får den omtanke som gör vår bokhandel unik. Med passion för litteratur och ledarskap 
-          skapar hon en plats där både teamet och besökarna trivs.
-        </p>
-      </section>
-    </section>
-  </section>
-</section>
-
-
-<section class="highlights-container">
-<section class="highlights-title">
-  <h2>Vår IT-ansvarige</h2>
-</section>
-
-<section class="highlights-box">
-  <section class="content-card">
-    <section class="card-header">
-      <h2>Sebastian</h2>
-    </section>
-
-    <section class="card-body">
-      <section class="event-img">
-        <img
-          src="images/sebastian.jpg"
-          alt="Sebastian, IT-ansvarig på Pärmar & Poesi, sitter vid en laptop och arbetar fokuserat samtidigt som han håller i en kopp kaffe."
-        />
-      </section>
-
-      <section class="card-text">
-        <p>
-          Sebastian är Pärmar & Poesis tekniska hjärta – den som ser till att allt från webbplats 
-          till kassa­system fungerar som det ska. Med lugn precision och kreativ problemlösning 
-          håller han vår digitala värld igång, så att vi andra kan fokusera på böckerna. 
-          Han brinner för att förena teknik och kultur på ett smart och användarvänligt sätt.
-        </p>
-      </section>
-    </section>
-  </section>
-</section>
-
-<section class="highlights-title">
-  <h2>Vår designchef</h2>
-</section>
-
-<section class="highlights-box">
-  <section class="content-card">
-    <section class="card-header">
-      <h2>Pontus</h2>
-    </section>
-
-    <section class="card-body">
-      <section class="event-img">
-        <img
-          src="images/pontus.jpg"
-          alt="Pontus, designchef på Pärmar & Poesi, sitter vid ett skrivbord och tecknar."
-        />
-      </section>
-
-      <section class="card-text">
-        <p>
-          Pontus är den kreativa kraften bakom Pärmar & Poesis visuella uttryck. 
-          Han har en skarp blick för form, färg och balans, och ser till att varje detalj – 
-          från skyltning till webbdesign – speglar bokhandelns själ. 
-          Med ett konstnärligt öga och passion för estetik gör Pontus våra idéer till något som både syns och känns.
-        </p>
-      </section>
-    </section>
-  </section>
-</section>
-
-
-</main>
-
-
-<!--MARIAS FOOTER-->
-    <footer id="footer" class="flex flex-col w-full pt-8 pb-4 md:pt-12 md:pb-6">
-      <!-- ÖVRE DELEN -->
-      <section
-        class="footer-top flex flex-col items-center text-center gap-6 p-6 md:p-8 md:flex-row md:justify-between md:items-start md:text-left md:gap-0"
-      >
-        <!-- LOGGA -->
-        <section class="logo-container mx-auto my-6 md:my-4 md:ml-6">
-          <a href="#top">
-            <img src="images/log.png" alt="Pärmar & Poesi logotyp" />
-          </a>
-        </section>
-
-        <!-- NYHETSBREV -->
-        <section
-          class="letter mx-auto flex flex-col items-center gap-2 md:items-start md:gap-1"
-        >
-          <p class="text-sm md:text-base">Prenumerera på nyhetsbrev</p>
-          <article class="Send flex items-center">
-            <input
-              type="email"
-              placeholder="E-mail"
-              class="w-56 h-9 px-2 rounded-md transition focus:outline-none md:w-64"
-            />
-            <button
-              id="Submit"
-              class="ml-2 px-3 py-1 text-xs rounded-md transition"
-            >
-              Skicka
-            </button>
-          </article>
-        </section>
-
-        <!-- KONTAKTINFORMATION -->
-        <section
-          class="info flex flex-col items-center gap-3 text-center md:items-end md:text-right"
-        >
-          <nav
-            class="info-row flex flex-col items-center gap-1 md:flex-row md:justify-between md:gap-2"
-          >
-            <span>Hitta till oss</span>
-            <i
-              class="fas fa-map-marker-alt p-2 rounded hover:bg-yellow-400 hover:text-black transition"
-            ></i>
-          </nav>
-          <nav
-            class="info-row flex flex-col items-center gap-1 md:flex-row md:justify-between md:gap-2"
-          >
-            <span>Kontakta oss</span>
-            <i
-              class="fas fa-phone-alt p-2 rounded hover:bg-yellow-400 hover:text-black transition"
-            ></i>
-          </nav>
-          <nav
-            class="info-row flex flex-col items-center gap-1 md:flex-row md:justify-between md:gap-2"
-          >
-            <span>E-post</span>
-            <i
-              class="fas fa-envelope p-2 rounded hover:bg-yellow-400 hover:text-black transition"
-            ></i>
-          </nav>
-        </section>
-      </section>
-
-      <section class="footer-container hidden"></section>
-
-      <section
-        class="footer-bottom flex flex-col items-start justify-end gap-2 px-6 pb-4 md:flex-row md:justify-between md:items-end"
-      >
-        <section
-          class="icons flex flex-col items-start gap-2 md:flex-row md:gap-4"
-        >
-          <h3 class="mb-2 md:mb-0">Följ oss</h3>
-          <nav class="social-media flex gap-3">
-            <i
-              class="fab fa-facebook p-2 rounded hover:bg-yellow-400 hover:text-black transition"
-            ></i>
-            <i
-              class="fab fa-instagram-square p-2 rounded hover:bg-yellow-400 hover:text-black transition"
-            ></i>
-            <i
-              class="fab fa-twitter-square p-2 rounded hover:bg-yellow-400 hover:text-black transition"
-            ></i>
-            <i
-              class="fab fa-pinterest-square p-2 rounded hover:bg-yellow-400 hover:text-black transition"
-            ></i>
-          </nav>
-        </section>
-
-        <p class="right text-xs md:text-sm mt-2 md:mr-6">
-          © <time datetime="2025">2025</time>
-          <a href="#">Pärmar &amp; Poesi</a>
-        </p>
-      </section>
-    </footer>
-    <script src="script.js"></script>
-  </body>
 </html>
