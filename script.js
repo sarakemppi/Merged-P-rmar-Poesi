@@ -9,8 +9,8 @@
 //   "romaner",
 // ];
 
-// const element = document.getElementById("changing-word");
-// const searchInput = document.querySelector(".search-input");
+// const element = document.getElementById("nav-search-input");
+// const searchInput = document.getElementById("nav-changing-word");
 // let wordIndex = 0;
 // let charIndex = 0;
 // let deleting = false;
