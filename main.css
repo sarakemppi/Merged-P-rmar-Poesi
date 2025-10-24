@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* --- FONTER --- */
+
 h1,
 h2 {
   font-family: "Gravitas One", system-ui, serif;
@@ -17,7 +17,6 @@ h6 {
   font-weight: 600;
 }
 
-/* Finjustering rubriker */
 h1 {
   font-size: 1.9rem !important;
   margin-bottom: 0.5rem;
@@ -59,7 +58,6 @@ main {
   padding-top: 2rem;
 }
 
-/* HEADER */
 .header {
   display: flex;
   flex-direction: column;
@@ -67,7 +65,6 @@ main {
   padding: 0;
 }
 
-/* Headerbilden */
 img.header-img,
 .header-content img {
   width: 100%;
@@ -78,8 +75,6 @@ img.header-img,
   border-radius: 0;
 }
 
-/* SÖK */
-/* MENY */
 .search-wrapper {
   position: relative;
   display: flex;
@@ -122,6 +117,72 @@ img.header-img,
   flex-shrink: 0;
 }
 
+@media (max-width: 768px) {
+  .search-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+  .search-wrapper .search {
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  padding: 15px 0;
+}
+@media (max-width: 600px) {
+  nav {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    line-height: 1.1;
+    top: 8rem !important;
+    padding: 0.4rem 0.6rem;
+    background-color: rgba(255, 255, 255, 0.97);
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+nav ul li a {
+  font-size: 0.95rem;
+  color: #593936;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #ff8800;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  label[for="menu-toggle"] {
+    position: relative;
+    margin-top: 0.6rem;
+    top: -0.4rem;
+    z-index: 40;
+  }
+
+  nav ul {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: calc(100% + 0.3rem) !important;
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Gravitas One", system-ui, serif;
+  }
+}
 .menu {
   list-style: none;
   display: flex;
@@ -147,7 +208,8 @@ img.header-img,
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/hero-image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/hero-image.jpg");
   height: 40rem;
   background-position: 50% 20%;
   background-repeat: no-repeat;
@@ -353,19 +415,19 @@ img.header-img,
     width: 50%;
   }
 }
-/* === FOOTER === */
+
 #footer {
   display: flex;
   flex-direction: column;
   width: 100%;
   background-color: #e8e3dc;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../images/bg.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url("../images/bg.jpg") center/cover no-repeat;
   color: white;
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
 
-/* --- ÖVRE DELEN --- */
 .footer-top {
   display: flex;
   flex-direction: column;
@@ -408,7 +470,7 @@ img.header-img,
   font-size: 1.5rem;
   padding-right: 2rem;
 }
-.footer-top .letter input[type=email] {
+.footer-top .letter input[type="email"] {
   width: 16rem;
   max-width: 80vw;
   height: 2.2rem;
@@ -420,16 +482,16 @@ img.header-img,
   color: #ffffff;
   transition: all 0.25s ease;
 }
-.footer-top .letter input[type=email]::placeholder {
+.footer-top .letter input[type="email"]::placeholder {
   color: rgb(191.2565217391, 118.6086956522, 13.3434782609);
 }
-.footer-top .letter input[type=email]:focus {
+.footer-top .letter input[type="email"]:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
   background-color: #ffffff;
   color: #000000;
 }
-.footer-top .letter input[type=email]:hover {
+.footer-top .letter input[type="email"]:hover {
   border-color: #f6c57e;
 }
 .footer-top .letter #Submit {
@@ -474,7 +536,6 @@ img.header-img,
   color: #000000;
 }
 
-/* --- NEDRE DELEN --- */
 .footer-bottom {
   display: flex;
   flex-direction: column;
@@ -536,7 +597,6 @@ img.header-img,
   }
 }
 
-/* FOOTER  */
 @media (max-width: 768px) {
   .footer-bottom {
     flex-direction: column !important;
@@ -557,40 +617,3 @@ img.header-img,
     text-align: center;
   }
 }
-@media (max-width: 768px) {
-  /* Gör nav-sektionen enkolumnig */
-  nav > section.max-w-6xl {
-    display: grid !important;
-    grid-template-columns: 1fr !important; /* ersätter grid-cols-2 */
-    justify-items: center;
-    align-items: start;
-    row-gap: 0.8rem; /* avstånd mellan hamburgare och sökfält */
-    margin-top: 0.8rem; /* luft under headerbilden */
-  }
-  /* Centrera hamburgarikonen */
-  label[for=menu-toggle] {
-    justify-self: center !important;
-    margin-top: 0.4rem;
-  }
-  /* Sökfältet – centrera och ge maxbredd */
-  .search-wrapper {
-    display: flex !important;
-    justify-content: center !important;
-    width: 90%;
-    max-width: 340px;
-  }
-  /* Dropdown – centrera under hamburgaren */
-  input#menu-toggle + label + ul {
-    position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    top: calc(100% + 0.4rem) !important;
-    z-index: 40 !important;
-    background: #fff;
-    border-radius: 0.4rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    padding: 0.4rem 0.6rem;
-  }
-}
-
-/*# sourceMappingURL=main.css.map */

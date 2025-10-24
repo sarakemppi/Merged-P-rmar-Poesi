@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-/* --------------------
-   RESET & LAYOUT
--------------------- */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,9 +19,7 @@ main {
   font-family: Arial, sans-serif;
 }
 
-/* --------------------
-   HEADER
--------------------- */
+
 .header {
   display: flex;
   flex-direction: column;
@@ -41,9 +37,7 @@ img.header-img,
   border-radius: 0;
 }
 
-/* --------------------
-   SÖKRUTA
--------------------- */
+
 .search-wrapper {
   position: relative;
   margin-left: auto;
@@ -92,7 +86,7 @@ img.header-img,
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* Exempelord (”highlight”) */
+
 .highlight {
   position: absolute;
   left: calc(var(--padding) + 34px);
@@ -112,9 +106,7 @@ img.header-img,
   51%, 100% { border-color: transparent; }
 }
 
-/* --------------------
-   MENY
--------------------- */
+
 nav {
   display: flex;
   justify-content: center;
@@ -155,9 +147,7 @@ nav {
   color: #ff8800;
 }
 
-/* --------------------
-   BOXKOMPONENTER
--------------------- */
+
 .box {
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -182,9 +172,7 @@ nav {
   display: block;
 }
 
-/* --------------------
-   FOOTER
--------------------- */
+
 #footer {
   display: flex;
   flex-direction: row;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pärmar & Poesi</title>
+    <title>Pärmar & Poesi - din lokala bokhandel</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -15,10 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
     />
 
-<link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main.css" />
 
     <!--glöm inte metadescription-->
-    
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -31,190 +31,211 @@
   </head>
 
   <body>
-<!-- SEBBES HEADER - med bakgrundsbild SEO-anpassad/maria-->
-<header class="header w-full">
-  <!-- LOGO / HERO-BILD -->
-  <figure class="relative">
-    <a href="index.html">
-      <img
-        src="images/header2.jpg"
-        alt="Bokhyllor fyllda med böcker i Pärmar & Poesi bokhandel"
-        class="header-img"
-      />
-    </a>
-  </figure>
+    <!-- SEBBES HEADER - med bakgrundsbild SEO-anpassad/maria-->
+    <header class="header w-full">
+      <!-- LOGO / HERO-BILD -->
+      <figure class="relative">
+        <a href="index.html">
+          <img
+            src="images/header2.jpg"
+            alt="Bokhyllor fyllda med böcker i Pärmar & Poesi bokhandel"
+            class="header-img"
+          />
+        </a>
+      </figure>
 
-  <!-- ANIMERAD SÖKRUTA (den som styrs av script.js) -->
-  <section
-    class="search-wrapper flex justify-center items-center mt-2 px-4"
-    aria-label="Sök efter böcker med förslag"
-  >
-  </section>
+      <!-- ANIMERAD SÖKRUTA (den som styrs av script.js) -->
+      <section
+        class="search-wrapper flex justify-center items-center mt-2 px-4"
+        aria-label="Sök efter böcker med förslag"
+      ></section>
 
-  <!-- NAVIGATION (en sökruta, uppe till höger) -->
-<nav class="w-full mt-3" aria-label="Huvudmeny">
-  <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-3 items-center relative">
+      <!-- NAVIGATION (en sökruta, uppe till höger) -->
+      <nav class="w-full mt-3" aria-label="Huvudmeny">
+        <div
+          class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-3 items-center relative"
+        >
+          <!-- Hamburger: bara mobil, vänster -->
+          <input id="menu-toggle" type="checkbox" class="peer hidden" />
+          <label
+            for="menu-toggle"
+            class="md:hidden justify-self-start text-3xl cursor-pointer"
+            aria-label="Öppna meny"
+            >☰</label
+          >
 
-    <!-- Hamburger: bara mobil, vänster -->
-    <input id="menu-toggle" type="checkbox" class="peer hidden" />
-    <label for="menu-toggle"
-           class="md:hidden justify-self-start text-3xl cursor-pointer"
-           aria-label="Öppna meny">☰</label>
+          <!-- Länkar: centrerade på desktop, dropdown från vänster på mobil -->
+          <ul
+            class="hidden peer-checked:flex flex-col absolute z-50 md:static md:flex md:flex-row md:gap-10 md:col-start-2 md:justify-self-center"
+          >
+            <li><a href="boknyheter.html">Boknyheter</a></li>
+            <li><a href="evenemang.html">Evenemang</a></li>
+            <li><a href="sortiment.html">Sortiment</a></li>
+            <li><a href="om-oss.html">Om oss</a></li>
+          </ul>
+          <!-- Sök: desktop (höger). Det är DENNA som JS ska styra -->
+          <form
+            class="search-wrapper hidden md:flex md:col-start-3 justify-self-end items-center gap-2 md:w-auto w-full md:justify-end justify-center px-4"
+            role="search"
+            aria-label="Sök i sortiment"
+          >
+            <label for="nav-search-input" class="sr-only">Sök efter…</label>
+            <div
+              class="search flex items-center w-full md:w-[300px] max-w-[500px] rounded-full"
+            >
+              <span
+                class="material-symbols-outlined search-icon"
+                aria-hidden="true"
+                >search</span
+              >
+              <input
+                id="nav-search-input"
+                class="nav-search-input flex-1 bg-transparent border-none outline-none px-3 py-2 text-sm"
+                type="search"
+                placeholder="Sök efter..."
+                autocomplete="off"
+              />
+              <span
+                id="nav-changing-word"
+                class="changing-word text-sm text-gray-500"
+                aria-live="polite"
+              ></span>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <!--PONTUS MAIN (utan hero)-->
 
-    <!-- Länkar: centrerade på desktop, dropdown från vänster på mobil -->
-    <ul class="hidden peer-checked:flex flex-col absolute z-50
-         md:static md:flex md:flex-row md:gap-10 md:col-start-2 md:justify-self-center">
-      <li><a href="boknyheter.html">Boknyheter</a></li>
-      <li><a href="evenemang.html">Evenemang</a></li>
-      <li><a href="sortiment.html">Sortiment</a></li>
-      <li><a href="om-oss.html">Om oss</a></li>
-    </ul>
+    <main>
+      <section class="event-container">
+        <section class="highlights-title">
+          <h2>Nyhet</h2>
+        </section>
+        <section class="highlights-box">
+          <section class="content-card">
+            <section class="card-header">
+              <h2>Your Soul is a River - Nikita Gill</h2>
+            </section>
+            <section class="card-body">
+              <section class="event-img">
+                <img
+                  src="images/bok-nyhet.jpg"
+                  alt="Boken 'Your Soul is a River' av Nikita Gill ligger på ett vitt, texturerat tyg. Omslaget är svart med guld- och vit text samt ett stjärnliknande mönster. Färgglada ljusreflektioner i blått, grönt, rosa och lila omger boken och skapar en drömlik, konstnärlig atmosfär."
+                />
+              </section>
+              <section class="card-text">
+                <p>
+                  Your Soul Is a River av Nikita Gill är en gripande diktsamling
+                  som tar läsaren med på en förvandlande resa av läkande och
+                  självupptäckt. Genom lyriska verser utforskar Gill teman som
+                  trauma, motståndskraft och den djupa kopplingen mellan
+                  människans själ och naturen.
+                </p>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section class="event-container">
+        <section class="highlights-title">
+          <h2>Nästkommande evenemang</h2>
+        </section>
+        <section class="highlights-box">
+          <section class="content-card">
+            <section class="card-header">
+              <h2>Boksignering Anna Svensson</h2>
+            </section>
+            <section class="card-body">
+              <section class="event-img">
+                <img
+                  src="images/female-author.jpg"
+                  alt="Kvinna i beige och vit kostym sitter på en stol och ler mot kameran."
+                />
+              </section>
+              <section class="card-text">
+                <p>
+                  I en mysig hörna av bokhandeln samlas bokälskare för att
+                  träffa författaren Anna Svensson, aktuell med sin senaste bok.
+                  Med ett varmt leende och en kopp kaffe i handen signerar Anna
+                  böcker och samtalar med sina läsare om inspiration,
+                  skrivprocess och framtida projekt.
+                </p>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section class="highlights-container">
+        <section class="highlights-title">
+          <h2>Månadens höjdpunkter</h2>
+        </section>
+        <section class="highlights-box">
+          <section class="content-card">
+            <section class="card-header">
+              <h2>Månadens författare</h2>
+            </section>
+            <section class="card-body">
+              <section class="card-img">
+                <img
+                  src="images/Portrait_photoshoot_at_Worldcon_75,_Helsinki,_before_the_Hugo_Awards_–_George_R._R._Martin.jpg"
+                  alt="George R.R. Martin, äldre man med vitt skägg och glasögon, klädd i mörk kostym med svarta ränder, svart skjorta, mönstrad slips och mörk keps. Han står mot en mörk bakgrund och ler svagt mot kameran."
+                />
+              </section>
+              <section class="card-text">
+                <h3>George R.R. Martin</h3>
+                <p>
+                  Den här månaden hyllar vi George R.R. Martin, mästaren bakom A
+                  Song of Ice and Fire. Med sin förmåga att skapa komplexa
+                  karaktärer, intrikata intriger och en värld full av oväntade
+                  vändningar har Martin fångat miljontals läsares fantasi
+                  världen över.
+                </p>
+              </section>
+            </section>
+          </section>
+        </section>
 
+        <section class="book-box">
+          <section class="book-month">
+            <h2>Månadens topplista</h2>
+          </section>
+          <section class="book-img">
+            <section class="book-info">
+              <img
+                src="images/7_US-Books_DHallows.webp"
+                alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling, utgiven av Scholastic. Harry Potter sträcker ut handen i en dramatisk pose framför en förstörd stenbyggnad med valv, mot en himmel i varma orange och gula toner. Texten på omslaget lyder: 'The Breathtaking Series Finale', 'Harry Potter and the Deathly Hallows', 'J.K. Rowling', 'Scholastic'."
+              />
+              <p>Harry Potter</p>
+            </section>
+            <section class="book-info">
+              <img
+                src="images/7_US-Books_DHallows.webp"
+                alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling, utgiven av Scholastic. Harry Potter sträcker ut handen i en dramatisk pose framför en förstörd stenbyggnad med valv, mot en himmel i varma orange och gula toner. Texten på omslaget lyder: 'The Breathtaking Series Finale', 'Harry Potter and the Deathly Hallows', 'J.K. Rowling', 'Scholastic'."
+              />
+              <p>Harry Potter</p>
+            </section>
+            <section class="book-info">
+              <img
+                src="images/7_US-Books_DHallows.webp"
+                alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling, utgiven av Scholastic. Harry Potter sträcker ut handen i en dramatisk pose framför en förstörd stenbyggnad med valv, mot en himmel i varma orange och gula toner. Texten på omslaget lyder: 'The Breathtaking Series Finale', 'Harry Potter and the Deathly Hallows', 'J.K. Rowling', 'Scholastic'."
+              />
+              <p>Harry Potter</p>
+            </section>
+            <section class="book-info">
+              <img
+                src="images/7_US-Books_DHallows.webp"
+                alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling, utgiven av Scholastic. Harry Potter sträcker ut handen i en dramatisk pose framför en förstörd stenbyggnad med valv, mot en himmel i varma orange och gula toner. Texten på omslaget lyder: 'The Breathtaking Series Finale', 'Harry Potter and the Deathly Hallows', 'J.K. Rowling', 'Scholastic'."
+              />
+              <p>Harry Potter</p>
+            </section>
+          </section>
+        </section>
+      </section>
+    </main>
 
-
-    
-    <!-- Sök: desktop (höger). Det är DENNA som JS ska styra -->
-    <form
-  class="search-wrapper hidden md:flex md:col-start-3 justify-self-end items-center gap-2 md:w-auto w-full md:justify-end justify-center px-4"
-  role="search"
-  aria-label="Sök i sortiment"
->
-  <label for="nav-search-input" class="sr-only">Sök efter…</label>
-  <div class="search flex items-center w-full md:w-[300px] max-w-[500px] rounded-full">
-    <span class="material-symbols-outlined search-icon" aria-hidden="true">search</span>
-    <input
-      id="nav-search-input"
-      class="nav-search-input flex-1 bg-transparent border-none outline-none px-3 py-2 text-sm"
-      type="search"
-      placeholder="Sök efter..."
-      autocomplete="off"
-    />
-    <span id="nav-changing-word" class="changing-word text-sm text-gray-500" aria-live="polite"></span>
-  </div>
-</form>
-
-  </div>
-
-</nav>
-
-
-<!--PONTUS MAIN (utan hero)-->
-
-
-<section class="event-container">
-
-<section class="highlights-title">
-<h2>Nyhet</h2>
-</section>
-<section class="highlights-box">
-
-<section class="content-card">
-<section class="card-header">
-<h2>Your Soul is a River - Nikita Gill</h2>
-</section>
-<section class="card-body">
-
-<section class="event-img">
-<img src="images/bok-nyhet.jpg"
-alt="Boken 'Your Soul is a River' av Nikita Gill ligger på ett vitt, texturerat tyg. Omslaget är svart med guld- och vit text samt ett stjärnliknande mönster. Färgglada ljusreflektioner i blått, grönt, rosa och lila omger boken och skapar en drömlik, konstnärlig atmosfär.">
-</section>
-<section class=" card-text">
-<p>Your Soul Is a River av Nikita Gill är en gripande diktsamling som tar läsaren med på en
-förvandlande resa av läkande och självupptäckt. Genom lyriska verser utforskar Gill
-teman som trauma, motståndskraft och den djupa kopplingen mellan människans själ och
-naturen.</p>
-</section>
-</section>
-</section>
-<section class="event-container">
-
-<section class="highlights-title">
-<h2>Nästkommande evenemang</h2>
-</section>
-<section class="highlights-box">
-
-<section class="content-card">
-<section class="card-header">
-<h2>Boksignering Anna Svensson</h2>
-</section>
-<section class="card-body">
-
-<section class="event-img">
-<img src="images/female-author.jpg"
-alt="Kvinna i beige och vit kostym sitter på en stol och ler mot kameran.">
-</section>
-<section class="card-text">
-<p> I en mysig hörna av bokhandeln samlas bokälskare för att träffa
-författaren Anna Svensson, aktuell med sin senaste bok. Med ett varmt leende och
-en kopp kaffe i handen signerar Anna böcker och samtalar med sina läsare om
-inspiration, skrivprocess och framtida projekt.</p>
-</section>
-</section>
-</section>
-
-<section class="highlights-container">
-<section class="highlights-title">
-<h2>Månadens höjdpunkter</h2>
-</section>
-<section class="highlights-box">
-
-<section class="content-card">
-<section class="card-header">
-<h2>Månadens författare</h2>
-</section>
-<section class="card-body">
-
-<section class="card-img">
-<img src="images/Portrait_photoshoot_at_Worldcon_75,_Helsinki,_before_the_Hugo_Awards_–_George_R._R._Martin.jpg"
-alt="George R.R. Martin, äldre man med vitt skägg och glasögon, klädd i mörk kostym med svarta ränder, svart skjorta, mönstrad slips och mörk keps. Han står mot en mörk bakgrund och ler svagt mot kameran.">
-</section>
-<section class="card-text">
-<h3>George R.R. Martin</h3>
-<p> Den här månaden hyllar vi George R.R. Martin, mästaren bakom A Song of
-Ice and Fire. Med sin förmåga att skapa komplexa karaktärer, intrikata
-intriger och en värld full av oväntade vändningar har Martin fångat
-miljontals läsares fantasi världen över.</p>
-</section>
-</section>
-</section>
-
-<section class="book-box">
-<section class="book-month">
-<h2>Månadens topplista</h2>
-</section>
-<section class="book-img">
-<section class="book-info">
-<img src="images/7_US-Books_DHallows.webp"
-alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling, utgiven av Scholastic. Harry Potter sträcker ut handen i en dramatisk pose framför en förstörd stenbyggnad med valv, mot en himmel i varma orange och gula toner. Texten på omslaget lyder: 'The Breathtaking Series Finale', 'Harry Potter and the Deathly Hallows', 'J.K. Rowling', 'Scholastic'.">
-<p>Harry Potter</p>
-</section>
-<section class="book-info">
-<img src="images/7_US-Books_DHallows.webp"
-alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling, utgiven av Scholastic. Harry Potter sträcker ut handen i en dramatisk pose framför en förstörd stenbyggnad med valv, mot en himmel i varma orange och gula toner. Texten på omslaget lyder: 'The Breathtaking Series Finale', 'Harry Potter and the Deathly Hallows', 'J.K. Rowling', 'Scholastic'.">
-<p>Harry Potter</p>
-</section>
-<section class="book-info">
-<img src="images/7_US-Books_DHallows.webp"
-alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling, utgiven av Scholastic. Harry Potter sträcker ut handen i en dramatisk pose framför en förstörd stenbyggnad med valv, mot en himmel i varma orange och gula toner. Texten på omslaget lyder: 'The Breathtaking Series Finale', 'Harry Potter and the Deathly Hallows', 'J.K. Rowling', 'Scholastic'.">
-<p>Harry Potter</p>
-</section>
-<section class="book-info">
-<img src="images/7_US-Books_DHallows.webp"
-alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling, utgiven av Scholastic. Harry Potter sträcker ut handen i en dramatisk pose framför en förstörd stenbyggnad med valv, mot en himmel i varma orange och gula toner. Texten på omslaget lyder: 'The Breathtaking Series Finale', 'Harry Potter and the Deathly Hallows', 'J.K. Rowling', 'Scholastic'.">
-<p>Harry Potter</p>
-</section>
-</section>
-</section>
-</section>
-</section>
-</section>
-
-
-<!--FOOTER-->
-<footer
-  id="footer"
-  class="flex flex-col w-full pt-8 pb-4 md:pt-12 md:pb-6"
->
+    <!--FOOTER-->
+    <footer id="footer" class="flex flex-col w-full pt-8 pb-4 md:pt-12 md:pb-6">
       <!-- ÖVRE DELEN -->
       <section
         class="footer-top flex flex-col items-center text-center gap-6 p-6 md:p-8 md:flex-row md:justify-between md:items-start md:text-left md:gap-0"
@@ -233,16 +254,16 @@ alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling,
           <p class="text-sm md:text-base text-white font-family: Gravitas one">Prenumerera på nyhetsbrev</p>
           <article class="Send flex items-center">
             <input
-  type="email"
-  placeholder="E-mail"
-  class="w-56 h-9 px-2 rounded-md transition focus:outline-none md:w-64"
-/>
-           <button
-  id="Submit"
-  class="ml-2 px-3 py-1 text-xs rounded-md transition"
->
-  Skicka
-</button>
+              type="email"
+              placeholder="E-mail"
+              class="w-56 h-9 px-2 rounded-md transition focus:outline-none md:w-64"
+            />
+            <button
+              id="Submit"
+              class="ml-2 px-3 py-1 text-xs rounded-md transition"
+            >
+              Skicka
+            </button>
           </article>
         </section>
 
@@ -277,10 +298,7 @@ alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling,
         </section>
       </section>
 
-      
       <section class="footer-container hidden"></section>
-
-      
 
       <section
         class="footer-bottom flex flex-col items-start justify-end gap-2 px-6 pb-4 md:flex-row md:justify-between md:items-end"
@@ -288,9 +306,7 @@ alt="Omslaget till boken 'Harry Potter and the Deathly Hallows' av J.K. Rowling,
         <section
           class="icons flex flex-col items-start gap-2 md:flex-row md:gap-4"
         >
-          <h3 class="mb-2 md:mb-0">
-  Följ oss
-</h3>
+          <h3 class="mb-2 md:mb-0">Följ oss</h3>
           <nav class="social-media flex gap-3">
             <i
               class="fab fa-facebook p-2 rounded hover:bg-yellow-400 hover:text-black transition"
